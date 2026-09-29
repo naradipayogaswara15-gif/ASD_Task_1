@@ -62,17 +62,19 @@ void insert_sort(int arr[], int &n, int x) {
 
 
 void insert_last_unique(int arr[], int &n, int x) {
-   n=0;
-insert_last_unique(arr,n,4);
-view_data_1(arr,n);
-// should print [4]
+    bool found = false;
 
-insert_last_unique(arr,n,4);
-insert_last_unique(arr,n,5);
-insert_last_unique(arr,n,2);
-insert_last_unique(arr,n,5);
-view_data_1(arr,n);
-// should print [4, 5, 2]
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == x) {
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        arr[n] = x;
+        n++;
+    }
 }
 
 
@@ -173,11 +175,13 @@ string group_and_average(int arr[], int n) {
 
 
 void swap_data(int arr[], int n) {
-   arr = {3, 5, 2, 4, 1, 2, 3, 1, 3}
-n=9;
-swap_data(arr,n);
-view_data_1(arr,n);
-// should print [3, 1, 3, 2, 1, 4, 2, 5, 3]
+  int temp;
+
+    for (int i = 0; i < n / 2; i++) {
+        temp = arr[i];
+        arr[i] = arr[n - 1 - i];
+        arr[n - 1 - i] = temp;
+    }
 }
 
 
@@ -199,10 +203,14 @@ void view_data_1(int arr[], int n) {
 
 
 void view_data_2(int arr[], int n) {
-   arr = {3, 5, 2, 4, 1, 2, 3, 1, 3}
-n=9;
-view_data_1(arr,n);
-// should print [3, 1, 3, 2, 1, 4, 2, 5, 3]
+   for (int i = n - 1; i >= 0; i--) {
+        cout << arr[i];
+
+        if (i > 0) {
+            cout << ", ";
+        }
+    }
+    cout << endl;
 }
 
 
