@@ -62,18 +62,17 @@ void insert_sort(int arr[], int &n, int x) {
 
 
 void insert_last_unique(int arr[], int &n, int x) {
-    /**
-    TODO: write a procedure to receive a number in parameter and insert it into an array so that no duplicate value exist in the array
-    arr : input array
-    n   : number of element inside array, n should increment by 1 after this procedure executed
-    x   : number to be inserted
-    */
+   n=0;
+insert_last_unique(arr,n,4);
+view_data_1(arr,n);
+// should print [4]
 
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+insert_last_unique(arr,n,4);
+insert_last_unique(arr,n,5);
+insert_last_unique(arr,n,2);
+insert_last_unique(arr,n,5);
+view_data_1(arr,n);
+// should print [4, 5, 2]
 }
 
 
@@ -174,17 +173,11 @@ string group_and_average(int arr[], int n) {
 
 
 void swap_data(int arr[], int n) {
-    /**
-    TODO: write a procedure to swap all number inside an array front to end (1-2-3 into 3-2-1)
-    arr : input array
-    n   : number of element inside array
-    */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+   arr = {3, 5, 2, 4, 1, 2, 3, 1, 3}
+n=9;
+swap_data(arr,n);
+view_data_1(arr,n);
+// should print [3, 1, 3, 2, 1, 4, 2, 5, 3]
 }
 
 
@@ -206,17 +199,10 @@ void view_data_1(int arr[], int n) {
 
 
 void view_data_2(int arr[], int n) {
-    /**
-    TODO: write a procedure to view all number inside an array, but in backward (from behind to front)
-    arr : input array
-    n   : number of element inside array
-    */
-
-    // YOUR CODES HERE
-    //-----------------------
-
-
-    //-----------------------
+   arr = {3, 5, 2, 4, 1, 2, 3, 1, 3}
+n=9;
+view_data_1(arr,n);
+// should print [3, 1, 3, 2, 1, 4, 2, 5, 3]
 }
 
 
